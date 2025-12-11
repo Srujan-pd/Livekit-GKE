@@ -1,36 +1,28 @@
 terraform {
-  required_version = ">= 1.4.0"
-
   required_providers {
-	google = {
-	  source = "hashicorp/google"
-	  version = "~> 5.0"
-	}
-       }
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 5.0"
+    }
+  }
 }
 
 provider "google" {
-project = var.project_id
-region = var.region
+  project = var.project_id
+  region  = var.region
 }
-
-#VPS
 
 resource "google_compute_network" "vpc" {
-name	= "S_VPC"
-auto_create_subnet = false
+  name                    = "secure-vpc"
+  auto_create_subnetworks = false
 }
 
-#Subnet
-
-resource "google_compte_subnet" "subnet" {
-name 	= "S_subnet"
-region 	= "var.region"
-network = google_compute_network.vpc.id
-ip_cidr_range = var.cidr_range
+resource "google_compute_subnetwork" "subnet" {
+  name          = "secure-subnet"
+  region        = var.region
+  network       = google_compute_network.vpc.id
+  ip_cidr_range = var.cidr_range
 }
-
-#firewall
 
 resource "google_compute_firewall" "allow_https" {
   name    = "allow-https-ingress"
@@ -40,10 +32,8 @@ resource "google_compute_firewall" "allow_https" {
 
   allow {
     protocol = "tcp"
-    ports    = ["443"]   
+    ports    = ["443"]
   }
 
-  source_ranges = ["0.0.0.0/0"]  
+  source_ranges = ["0.0.0.0/0"]
 }
-
-
