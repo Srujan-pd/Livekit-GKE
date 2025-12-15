@@ -1,0 +1,93 @@
+2025-12-12 13:10:39,518 DEBUG    root            Loaded Command Group: ['gcloud', 'storage']
+2025-12-12 13:10:39,530 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'buckets']
+2025-12-12 13:10:40,760 DEBUG    root            Loaded Command Group: ['gcloud', 'storage', 'buckets', 'create']
+2025-12-12 13:10:40,767 DEBUG    root            Running [gcloud.storage.buckets.create] with arguments: [--project: "true-shoreline-469411-a3", URL:1: "['gs://my-test-bucket-12345']"]
+2025-12-12 13:10:40,768 INFO     ___FILE_ONLY___ Creating gs://my-test-bucket-12345/...
+
+2025-12-12 13:10:40,792 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2025-12-12 13:10:41,213 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /storage/v1/b?alt=json&enableObjectRetention=False&project=true-shoreline-469411-a3&projection=noAcl HTTP/1.1" 409 471
+2025-12-12 13:10:41,217 DEBUG    root            (gcloud.storage.buckets.create) HTTPError 409: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/errors.py", line 327, in wrapper
+    return function(*args, **kwargs)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/gcs_json/client.py", line 520, in create_bucket
+    created_bucket_metadata = self.client.buckets.Insert(request)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/storage/v1/storage_v1_client.py", line 539, in Insert
+    return self._RunMethod(
+           ~~~~~~~~~~~~~~~^
+        config, request, global_params=global_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 747, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 753, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 612, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+        http_response, method_config=method_config, request=request)
+apitools.base.py.exceptions.HttpConflictError: HttpError accessing <https://storage.googleapis.com/storage/v1/b?alt=json&enableObjectRetention=False&project=true-shoreline-469411-a3&projection=noAcl>: response: <{'content-type': 'application/json; charset=UTF-8', 'x-guploader-uploadid': 'AHVrFxNXRLzlZnYh8bmtimTfjBTQuRV7Ju2Nbw2LnWACidPIDwyhodAzcJ3jnOI_AkW1b6x9AiC_Yf0', 'date': 'Fri, 12 Dec 2025 13:10:41 GMT', 'vary': 'Origin, X-Origin', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'pragma': 'no-cache', 'content-length': '471', 'server': 'UploadServer', 'status': 409}>, content <{
+  "error": {
+    "code": 409,
+    "message": "The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.",
+    "errors": [
+      {
+        "message": "The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.",
+        "domain": "global",
+        "reason": "conflict"
+      }
+    ]
+  }
+}
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 944, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 955, in Run
+    resources = command_instance.Run(args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/storage/buckets/create.py", line 193, in Run
+    ).execute()
+      ~~~~~~~^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/storage/tasks/buckets/create_bucket_task.py", line 48, in execute
+    api_factory.get_api(provider).create_bucket(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._bucket_resource, request_config=request_config)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/errors.py", line 331, in wrapper
+    core_exceptions.reraise(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        translate_error(
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 149, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/six/__init__.py", line 718, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/errors.py", line 327, in wrapper
+    return function(*args, **kwargs)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/gcs_json/client.py", line 520, in create_bucket
+    created_bucket_metadata = self.client.buckets.Insert(request)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/storage/v1/storage_v1_client.py", line 539, in Insert
+    return self._RunMethod(
+           ~~~~~~~~~~~~~~~^
+        config, request, global_params=global_params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 747, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 753, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 612, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+        http_response, method_config=method_config, request=request)
+googlecloudsdk.api_lib.storage.errors.GcsConflictError: HTTPError 409: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
+2025-12-12 13:10:41,235 ERROR    root            (gcloud.storage.buckets.create) HTTPError 409: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.

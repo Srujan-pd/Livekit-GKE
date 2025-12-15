@@ -1,0 +1,267 @@
+2025-12-12 12:19:54,683 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2025-12-12 12:19:54,716 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'add_iam_policy_binding']
+2025-12-12 12:19:54,728 DEBUG    root            Running [gcloud.projects.add-iam-policy-binding] with arguments: [--member: "serviceAccount:terraform-sa@true-shoreline-469411-a3.iam.gserviceaccount.com", --role: "roles/compute.admin", PROJECT_ID: "true-shoreline-469411-a3"]
+2025-12-12 12:19:54,772 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2025-12-12 12:19:54,896 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "POST /v1/projects/true-shoreline-469411-a3:getIamPolicy?alt=json HTTP/1.1" 200 None
+2025-12-12 12:19:54,918 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2025-12-12 12:19:55,354 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "POST /v1/projects/true-shoreline-469411-a3:setIamPolicy?alt=json HTTP/1.1" 200 None
+2025-12-12 12:19:55,356 INFO     ___FILE_ONLY___ Updated IAM policy for project [true-shoreline-469411-a3].
+
+2025-12-12 12:19:55,357 DEBUG    root            Chosen display Format:default
+2025-12-12 12:19:55,358 INFO     root            Display format: "default"
+2025-12-12 12:19:55,414 INFO     ___FILE_ONLY___ bindings
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,415 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,416 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,416 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,416 INFO     ___FILE_ONLY___ serviceAccount:service-309524653590@gcp-sa-aiplatform.iam.gserviceaccount.com
+2025-12-12 12:19:55,416 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,416 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ roles/aiplatform.serviceAgent
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,417 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___ serviceAccount:service-309524653590@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,418 INFO     ___FILE_ONLY___ roles/bigquerydatatransfer.serviceAgent
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,419 INFO     ___FILE_ONLY___ serviceAccount:terraform-sa@true-shoreline-469411-a3.iam.gserviceaccount.com
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___ roles/compute.admin
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,420 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ serviceAccount:service-309524653590@compute-system.iam.gserviceaccount.com
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,421 INFO     ___FILE_ONLY___ roles/compute.serviceAgent
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ serviceAccount:service-309524653590@container-engine-robot.iam.gserviceaccount.com
+2025-12-12 12:19:55,422 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ roles/container.serviceAgent
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,423 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ serviceAccount:service-309524653590@containerregistry.iam.gserviceaccount.com
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ roles/containerregistry.ServiceAgent
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,424 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___ serviceAccount:309524653590@cloudservices.gserviceaccount.com
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,425 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ roles/editor
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,426 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ serviceAccount:309524653590-compute@developer.gserviceaccount.com
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ user:ali@primisdigital.com
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ user:nisari.n@primisdigital.com
+2025-12-12 12:19:55,427 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___ user:srujan.sane@primisdigital.com
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___ user:taha.vaghela@primisdigital.com
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,428 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,429 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,429 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,429 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,429 INFO     ___FILE_ONLY___ roles/owner
+2025-12-12 12:19:55,430 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,430 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,430 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,430 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___ serviceAccount:service-309524653590@gcp-sa-pubsub.iam.gserviceaccount.com
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,431 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___ roles/pubsub.serviceAgent
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,432 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___ serviceAccount:service-309524653590@serverless-robot-prod.iam.gserviceaccount.com
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,433 INFO     ___FILE_ONLY___ roles/run.serviceAgent
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ members
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ serviceAccount:309524653590-compute@developer.gserviceaccount.com
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,434 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___ -
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___ serviceAccount:terraform-sa@true-shoreline-469411-a3.iam.gserviceaccount.com
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___   
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___ role
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,435 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,436 INFO     ___FILE_ONLY___ roles/storage.admin
+2025-12-12 12:19:55,436 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,436 INFO     ___FILE_ONLY___ etag
+2025-12-12 12:19:55,436 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,436 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,436 INFO     ___FILE_ONLY___ BwZFwEd4UaQ=
+2025-12-12 12:19:55,436 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,437 INFO     ___FILE_ONLY___ version
+2025-12-12 12:19:55,437 INFO     ___FILE_ONLY___ :
+2025-12-12 12:19:55,437 INFO     ___FILE_ONLY___  
+2025-12-12 12:19:55,437 INFO     ___FILE_ONLY___ 1
+2025-12-12 12:19:55,437 INFO     ___FILE_ONLY___ 
+
+2025-12-12 12:19:55,448 DEBUG    root            SDK update checks are disabled.

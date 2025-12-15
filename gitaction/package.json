@@ -1,0 +1,8 @@
+{
+  "name": "simple-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo Building the app... && node app.js"
+  }
+}
+

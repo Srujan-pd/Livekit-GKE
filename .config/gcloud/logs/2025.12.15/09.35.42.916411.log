@@ -1,0 +1,87 @@
+2025-12-15 09:35:43,308 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2025-12-15 09:35:43,389 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'config_ssh']
+2025-12-15 09:35:43,403 DEBUG    root            Running [gcloud.compute.config-ssh] with arguments: []
+2025-12-15 09:35:43,498 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/?recursive=true
+2025-12-15 09:35:43,504 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2025-12-15 09:35:43,506 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 141
+2025-12-15 09:35:43,508 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/token
+2025-12-15 09:35:43,524 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 867
+2025-12-15 09:35:43,809 WARNING  root            The private SSH key file for gcloud does not exist.
+2025-12-15 09:35:43,810 WARNING  root            The public SSH key file for gcloud does not exist.
+2025-12-15 09:35:43,810 WARNING  root            You do not have an SSH key for gcloud.
+2025-12-15 09:35:43,810 WARNING  root            SSH keygen will be executed to generate a key.
+2025-12-15 09:35:43,810 DEBUG    root            Running command [/usr/bin/ssh-keygen -t rsa -f /home/srujan_sane/.ssh/google_compute_engine].
+2025-12-15 09:35:43,810 DEBUG    root            Executing command: ['/usr/bin/ssh-keygen', '-t', 'rsa', '-f', '/home/srujan_sane/.ssh/google_compute_engine']
+2025-12-15 09:35:49,022 DEBUG    root            SSH Config File [/home/srujan_sane/.ssh/config] could not be opened: Unable to read file [/home/srujan_sane/.ssh/config]: [Errno 2] No such file or directory: '/home/srujan_sane/.ssh/config'
+2025-12-15 09:35:49,028 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2025-12-15 09:35:49,258 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/true-shoreline-469411-a3?alt=json HTTP/1.1" 200 None
+2025-12-15 09:35:49,262 DEBUG    root            Current SSH keys in project: []
+2025-12-15 09:35:49,263 INFO     ___FILE_ONLY___ Updating project ssh metadata...
+2025-12-15 09:35:49,882 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /compute/v1/projects/true-shoreline-469411-a3/setCommonInstanceMetadata?alt=json HTTP/1.1" 200 None
+2025-12-15 09:35:49,883 DEBUG    root            Operations to inspect: [(<Operation
+ id: 5827227303181183130
+ insertTime: '2025-12-15T01:35:49.702-08:00'
+ kind: 'compute#operation'
+ name: 'operation-1765791349275-645fa561efd4b-088d3a99-bd8e4af7'
+ operationType: 'compute.projects.setCommonInstanceMetadata'
+ progress: 0
+ selfLink: 'https://www.googleapis.com/compute/v1/projects/true-shoreline-469411-a3/global/operations/operation-1765791349275-645fa561efd4b-088d3a99-bd8e4af7'
+ setCommonInstanceMetadataOperationMetadata: <SetCommonInstanceMetadataOperationMetadata
+ clientOperationId: 'operation-1765791349275-645fa561efd4b-088d3a99-bd8e4af7'>
+ startTime: '2025-12-15T01:35:49.705-08:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 309524653590
+ targetLink: 'https://www.googleapis.com/compute/v1/projects/true-shoreline-469411-a3'
+ user: '309524653590-compute@developer.gserviceaccount.com'
+ warnings: []>, 3)]
+2025-12-15 09:35:57,752 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /compute/v1/projects/true-shoreline-469411-a3/global/operations/operation-1765791349275-645fa561efd4b-088d3a99-bd8e4af7/wait?alt=json HTTP/1.1" 200 None
+2025-12-15 09:35:57,754 DEBUG    root            Operations to inspect: [(<Operation
+ endTime: '2025-12-15T01:35:57.512-08:00'
+ id: 5827227303181183130
+ insertTime: '2025-12-15T01:35:49.702-08:00'
+ kind: 'compute#operation'
+ name: 'operation-1765791349275-645fa561efd4b-088d3a99-bd8e4af7'
+ operationType: 'compute.projects.setCommonInstanceMetadata'
+ progress: 100
+ selfLink: 'https://www.googleapis.com/compute/v1/projects/true-shoreline-469411-a3/global/operations/operation-1765791349275-645fa561efd4b-088d3a99-bd8e4af7'
+ setCommonInstanceMetadataOperationMetadata: <SetCommonInstanceMetadataOperationMetadata
+ clientOperationId: 'operation-1765791349275-645fa561efd4b-088d3a99-bd8e4af7'
+ perLocationOperations: <PerLocationOperationsValue
+ additionalProperties: [<AdditionalProperty
+ key: 'us-central1-a'
+ value: <SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo
+ state: StateValueValuesEnum(DONE, 1)>>, <AdditionalProperty
+ key: 'us-central1-ai1a'
+ value: <SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo
+ state: StateValueValuesEnum(DONE, 1)>>, <AdditionalProperty
+ key: 'us-central1-b'
+ value: <SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo
+ state: StateValueValuesEnum(DONE, 1)>>, <AdditionalProperty
+ key: 'us-central1-c'
+ value: <SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo
+ state: StateValueValuesEnum(DONE, 1)>>, <AdditionalProperty
+ key: 'us-central1-d'
+ value: <SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo
+ state: StateValueValuesEnum(DONE, 1)>>, <AdditionalProperty
+ key: 'us-central1-f'
+ value: <SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo
+ state: StateValueValuesEnum(DONE, 1)>>]>>
+ startTime: '2025-12-15T01:35:49.705-08:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 309524653590
+ targetLink: 'https://www.googleapis.com/compute/v1/projects/true-shoreline-469411-a3'
+ user: '309524653590-compute@developer.gserviceaccount.com'
+ warnings: []>, 3)]
+2025-12-15 09:35:57,754 INFO     ___FILE_ONLY___ Updated [https://www.googleapis.com/compute/v1/projects/true-shoreline-469411-a3].
+
+2025-12-15 09:35:58,269 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/true-shoreline-469411-a3?alt=json HTTP/1.1" 200 None
+2025-12-15 09:35:58,543 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/true-shoreline-469411-a3/aggregated/instances?alt=json&filter=status+eq+RUNNING&includeAllScopes=True&maxResults=500&returnPartialSuccess=True HTTP/1.1" 200 None
+2025-12-15 09:35:58,585 INFO     ___FILE_ONLY___ You should now be able to use ssh/scp with your instances.
+For example, try running:
+
+  $ ssh demo-1.us-central1-c.true-shoreline-469411-a3
+
+
+2025-12-15 09:35:58,586 DEBUG    root            Chosen display Format:default
+2025-12-15 09:35:58,587 INFO     root            Display format: "default"
+2025-12-15 09:35:58,609 DEBUG    root            SDK update checks are disabled.

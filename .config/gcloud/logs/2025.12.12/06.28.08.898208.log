@@ -1,0 +1,25 @@
+2025-12-12 06:28:08,902 DEBUG    root            Loaded Command Group: ['gcloud', 'organizations']
+2025-12-12 06:28:08,927 DEBUG    root            Loaded Command Group: ['gcloud', 'organizations', 'list']
+2025-12-12 06:28:08,934 DEBUG    root            Running [gcloud.organizations.list] with arguments: []
+2025-12-12 06:28:09,033 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/?recursive=true
+2025-12-12 06:28:09,039 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2025-12-12 06:28:09,041 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 141
+2025-12-12 06:28:09,044 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/token
+2025-12-12 06:28:09,046 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/309524653590-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 869
+2025-12-12 06:28:09,084 DEBUG    root            Chosen display Format:
+          table(
+            displayName:label=DISPLAY_NAME,
+            name.segment():label=ID:align=right:sort=1,
+            owner.directoryCustomerId:label=DIRECTORY_CUSTOMER_ID:align=right
+          )
+2025-12-12 06:28:09,085 INFO     root            Display format: "
+          table(
+            displayName:label=DISPLAY_NAME,
+            name.segment():label=ID:align=right:sort=1,
+            owner.directoryCustomerId:label=DIRECTORY_CUSTOMER_ID:align=right
+          )"
+2025-12-12 06:28:09,087 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2025-12-12 06:28:09,164 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "POST /v1/organizations:search?alt=json HTTP/1.1" 200 None
+2025-12-12 06:28:09,165 INFO     ___FILE_ONLY___ Listed 0 items.
+
+2025-12-12 06:28:09,284 DEBUG    root            SDK update checks are disabled.

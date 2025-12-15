@@ -1,0 +1,16 @@
+2025-12-12 13:09:54,280 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2025-12-12 13:09:54,310 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'revoke']
+2025-12-12 13:09:54,312 DEBUG    root            Running [gcloud.auth.revoke] with arguments: [ACCOUNTS:1: "['309524653590-compute@developer.gserviceaccount.com']"]
+2025-12-12 13:09:54,347 DEBUG    root            (gcloud.auth.revoke) Cannot revoke GCE-provided credentials.
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 944, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 955, in Run
+    resources = command_instance.Run(args)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/auth/revoke.py", line 118, in Run
+    if not c_store.Revoke(account):
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 1698, in Revoke
+    raise RevokeError('Cannot revoke GCE-provided credentials.')
+googlecloudsdk.core.credentials.store.RevokeError: Cannot revoke GCE-provided credentials.
+2025-12-12 13:09:54,356 ERROR    root            (gcloud.auth.revoke) Cannot revoke GCE-provided credentials.
