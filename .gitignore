@@ -8,3 +8,4 @@ projectacc/
 sql/
 .*
 !.gitignore
+terraform.tfstate.d/
