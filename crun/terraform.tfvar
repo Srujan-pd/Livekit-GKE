@@ -1,4 +1,0 @@
-project_id       = "true-shoreline-469411-a3"
-service_name     = "my-cloudrun-app"
-container_image  = "us-docker.pkg.dev/true-shoreline-469411-a3/my-repo/cloudrun:V01"
-    
