@@ -20,10 +20,10 @@ variable "node_machine_type" {
 }
 
 variable "min_nodes" {
-  default = 2
+  default = 1
 }
 
 variable "max_nodes" {
-  default = 6
+  default = 3
 }
 

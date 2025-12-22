@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: livekit-agent
+  namespace: livekit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: livekit-agent
+  template:
+    metadata:
+      labels:
+        app: livekit-agent
+    spec:
+      containers:
+      - name: agent
+        image: us-central1-docker.pkg.dev/YOUR_PROJECT/livekit-agents/casey-e12:latest
+
+        env:
+        - name: LIVEKIT_URL
+          value: "wss://<LIVEKIT-EXTERNAL-IP>:7880"
+
+        - name: LIVEKIT_API_KEY
+          value: devkey
+
+        - name: LIVEKIT_API_SECRET
+          value: devsecret
+
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-secrets
+              key: openai_key
+
+        - name: ASSEMBLYAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-secrets
+              key: assemblyai_key
+
+        - name: CARTESIA_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-secrets
+              key: cartesia_key
+

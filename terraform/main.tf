@@ -35,6 +35,8 @@ resource "google_project_iam_member" "gke_roles" {
 resource "google_container_cluster" "livekit" {
   name     = var.cluster_name
   location = var.region
+  
+  deletion_protection = false
 
   remove_default_node_pool = true
   initial_node_count       = 1
@@ -67,6 +69,9 @@ resource "google_container_node_pool" "primary" {
   node_config {
     machine_type = var.node_machine_type
     service_account = google_service_account.gke_sa.email
+
+    disk_type    = "pd-balanced"
+    disk_size_gb = 30
 
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
