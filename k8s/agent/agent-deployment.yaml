@@ -44,4 +44,3 @@ spec:
             secretKeyRef:
               name: llm-secrets
               key: cartesia_key
-
