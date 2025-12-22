@@ -1,5 +1,6 @@
 This is the files architecture for your LiveKit + Agent on GKE setup.
 
+```text
 livekit-gke/
 │
 ├── terraform/                    # GKE infrastructure 
@@ -25,5 +26,5 @@ livekit-gke/
     ├── agent.py
     ├── requirements.txt
     └── Dockerfile
-
+```
 
